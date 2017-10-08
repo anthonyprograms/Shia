@@ -45,12 +45,12 @@ public extension YouTubePlayerDelegate {
     func playerQualityChanged(_ videoPlayer: YouTubePlayerView, quality: YoutubePlaybackQuality) {}
 }
 
-open class YouTubePlayerView: UIView {
-    
-    public typealias Parameters = [String: Any]
-    public var baseUrl = "about:blank"
+public class YouTubePlayerView: UIView {
     
     fileprivate var webView: UIWebView!
+    private var baseUrl = "about:blank"
+    
+    public typealias Parameters = [String: Any]
     
     fileprivate(set) open var ready = false
     fileprivate(set) open var state = YouTubePlayerState.ready
@@ -58,7 +58,7 @@ open class YouTubePlayerView: UIView {
     
     open var playerVars = Parameters()
     
-    open weak var delegate: YouTubePlayerDelegate?
+    public weak var delegate: YouTubePlayerDelegate?
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -76,6 +76,19 @@ open class YouTubePlayerView: UIView {
         webView.removeFromSuperview()
         webView.frame = bounds
         addSubview(webView)
+    }
+}
+
+extension YouTubePlayerView: UIWebViewDelegate {
+    open func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        let url = request.url
+        
+        if let url = url, url.scheme == "ytplayer" {
+            handle(event: url)
+            
+        }
+        
+        return true
     }
 }
 
@@ -214,7 +227,7 @@ fileprivate extension ParametersAndDefaults {
     }
 }
 
-fileprivate extension JSEventHandling {
+fileprivate extension EventHandling {
     func handle(event url: URL) {
         guard let data: String = url.queryStringComponents()["data"] as? String else { return }
         
@@ -243,23 +256,10 @@ fileprivate extension JSEventHandling {
     }
 }
 
-extension YouTubePlayerView: UIWebViewDelegate {
-    open func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        let url = request.url
-
-        if let url = url, url.scheme == "ytplayer" {
-            handle(event: url)
-            
-        }
-        
-        return true
-    }
-}
-
 private typealias WebViewInitialization = YouTubePlayerView
 private typealias LoadPlayer = YouTubePlayerView
 private typealias PlayerControls = YouTubePlayerView
 private typealias Helpers = YouTubePlayerView
 private typealias PlayerSetup = YouTubePlayerView
 private typealias ParametersAndDefaults = YouTubePlayerView
-private typealias JSEventHandling = YouTubePlayerView
+private typealias EventHandling = YouTubePlayerView

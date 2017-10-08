@@ -118,10 +118,10 @@
 			children = (
 				92EB574E1F8AA761009A41F2 /* ShiaPlayer.h */,
 				92EB57271F8A086F009A41F2 /* YouTubePlayer.swift */,
-				923F48FB1F8AAD820077C983 /* Shia+URL.swift */,
 				92EB57251F8A07B0009A41F2 /* YouTubePlayer.html */,
 				923F48F91F8AAC9C0077C983 /* SoundCloudPlayer.swift */,
 				923F48F81F8AAC780077C983 /* SoundCloudPlayer.html */,
+				923F48FB1F8AAD820077C983 /* Shia+URL.swift */,
 				92EB574F1F8AA761009A41F2 /* Info.plist */,
 			);
 			path = ShiaPlayer;
