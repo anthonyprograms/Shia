@@ -45,13 +45,6 @@ public extension YouTubePlayerDelegate {
     func playerQualityChanged(_ videoPlayer: YouTubePlayerView, quality: YoutubePlaybackQuality) {}
 }
 
-private extension URL {
-    func queryStringComponents() -> [String: Any] {
-        return [:]
-    }
-}
-
-
 open class YouTubePlayerView: UIView {
     
     public typealias Parameters = [String: Any]
