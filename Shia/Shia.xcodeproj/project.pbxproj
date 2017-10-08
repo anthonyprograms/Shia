@@ -12,9 +12,36 @@
 		9246A5491F8A068200FC81C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9246A5471F8A068200FC81C4 /* Main.storyboard */; };
 		9246A54B1F8A068200FC81C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9246A54A1F8A068200FC81C4 /* Assets.xcassets */; };
 		9246A54E1F8A068200FC81C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9246A54C1F8A068200FC81C4 /* LaunchScreen.storyboard */; };
-		92EB57261F8A07B0009A41F2 /* YouTubePlayer.html in Resources */ = {isa = PBXBuildFile; fileRef = 92EB57251F8A07B0009A41F2 /* YouTubePlayer.html */; };
-		92EB57281F8A086F009A41F2 /* YouTubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB57271F8A086F009A41F2 /* YouTubePlayer.swift */; };
+		92EB57501F8AA761009A41F2 /* ShiaPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 92EB574E1F8AA761009A41F2 /* ShiaPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92EB57531F8AA761009A41F2 /* ShiaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EB574C1F8AA761009A41F2 /* ShiaPlayer.framework */; };
+		92EB57541F8AA761009A41F2 /* ShiaPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92EB574C1F8AA761009A41F2 /* ShiaPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		92EB57591F8AA76B009A41F2 /* YouTubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB57271F8A086F009A41F2 /* YouTubePlayer.swift */; };
+		92EB575A1F8AA818009A41F2 /* YouTubePlayer.html in Resources */ = {isa = PBXBuildFile; fileRef = 92EB57251F8A07B0009A41F2 /* YouTubePlayer.html */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92EB57511F8AA761009A41F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9246A5381F8A068200FC81C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92EB574B1F8AA761009A41F2;
+			remoteInfo = ShiaPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92EB57581F8AA761009A41F2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92EB57541F8AA761009A41F2 /* ShiaPlayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9246A5401F8A068200FC81C4 /* Shia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +53,21 @@
 		9246A54F1F8A068200FC81C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92EB57251F8A07B0009A41F2 /* YouTubePlayer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = YouTubePlayer.html; sourceTree = "<group>"; };
 		92EB57271F8A086F009A41F2 /* YouTubePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubePlayer.swift; sourceTree = "<group>"; };
+		92EB574C1F8AA761009A41F2 /* ShiaPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShiaPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92EB574E1F8AA761009A41F2 /* ShiaPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShiaPlayer.h; sourceTree = "<group>"; };
+		92EB574F1F8AA761009A41F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9246A53D1F8A068200FC81C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EB57531F8AA761009A41F2 /* ShiaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92EB57481F8AA761009A41F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				9246A5421F8A068200FC81C4 /* Shia */,
+				92EB574D1F8AA761009A41F2 /* ShiaPlayer */,
 				9246A5411F8A068200FC81C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				9246A5401F8A068200FC81C4 /* Shia.app */,
+				92EB574C1F8AA761009A41F2 /* ShiaPlayer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +100,6 @@
 			children = (
 				9246A5431F8A068200FC81C4 /* AppDelegate.swift */,
 				9246A5451F8A068200FC81C4 /* ViewController.swift */,
-				92EB57251F8A07B0009A41F2 /* YouTubePlayer.html */,
-				92EB57271F8A086F009A41F2 /* YouTubePlayer.swift */,
 				9246A5471F8A068200FC81C4 /* Main.storyboard */,
 				9246A54A1F8A068200FC81C4 /* Assets.xcassets */,
 				9246A54C1F8A068200FC81C4 /* LaunchScreen.storyboard */,
@@ -70,7 +108,29 @@
 			path = Shia;
 			sourceTree = "<group>";
 		};
+		92EB574D1F8AA761009A41F2 /* ShiaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				92EB574E1F8AA761009A41F2 /* ShiaPlayer.h */,
+				92EB57271F8A086F009A41F2 /* YouTubePlayer.swift */,
+				92EB57251F8A07B0009A41F2 /* YouTubePlayer.html */,
+				92EB574F1F8AA761009A41F2 /* Info.plist */,
+			);
+			path = ShiaPlayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		92EB57491F8AA761009A41F2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EB57501F8AA761009A41F2 /* ShiaPlayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		9246A53F1F8A068200FC81C4 /* Shia */ = {
@@ -80,15 +140,35 @@
 				9246A53C1F8A068200FC81C4 /* Sources */,
 				9246A53D1F8A068200FC81C4 /* Frameworks */,
 				9246A53E1F8A068200FC81C4 /* Resources */,
+				92EB57581F8AA761009A41F2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				92EB57521F8AA761009A41F2 /* PBXTargetDependency */,
 			);
 			name = Shia;
 			productName = Shia;
 			productReference = 9246A5401F8A068200FC81C4 /* Shia.app */;
 			productType = "com.apple.product-type.application";
+		};
+		92EB574B1F8AA761009A41F2 /* ShiaPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92EB57571F8AA761009A41F2 /* Build configuration list for PBXNativeTarget "ShiaPlayer" */;
+			buildPhases = (
+				92EB57471F8AA761009A41F2 /* Sources */,
+				92EB57481F8AA761009A41F2 /* Frameworks */,
+				92EB57491F8AA761009A41F2 /* Headers */,
+				92EB574A1F8AA761009A41F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShiaPlayer;
+			productName = ShiaPlayer;
+			productReference = 92EB574C1F8AA761009A41F2 /* ShiaPlayer.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,6 +181,10 @@
 				ORGANIZATIONNAME = "Anthony Williams";
 				TargetAttributes = {
 					9246A53F1F8A068200FC81C4 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					92EB574B1F8AA761009A41F2 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -120,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				9246A53F1F8A068200FC81C4 /* Shia */,
+				92EB574B1F8AA761009A41F2 /* ShiaPlayer */,
 			);
 		};
 /* End PBXProject section */
@@ -132,7 +217,14 @@
 				9246A54E1F8A068200FC81C4 /* LaunchScreen.storyboard in Resources */,
 				9246A54B1F8A068200FC81C4 /* Assets.xcassets in Resources */,
 				9246A5491F8A068200FC81C4 /* Main.storyboard in Resources */,
-				92EB57261F8A07B0009A41F2 /* YouTubePlayer.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92EB574A1F8AA761009A41F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EB575A1F8AA818009A41F2 /* YouTubePlayer.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,13 +235,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92EB57281F8A086F009A41F2 /* YouTubePlayer.swift in Sources */,
 				9246A5461F8A068200FC81C4 /* ViewController.swift in Sources */,
 				9246A5441F8A068200FC81C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92EB57471F8AA761009A41F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EB57591F8AA76B009A41F2 /* YouTubePlayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92EB57521F8AA761009A41F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92EB574B1F8AA761009A41F2 /* ShiaPlayer */;
+			targetProxy = 92EB57511F8AA761009A41F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9246A5471F8A068200FC81C4 /* Main.storyboard */ = {
@@ -281,6 +388,7 @@
 		9246A5531F8A068200FC81C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC92889S4P;
@@ -296,6 +404,7 @@
 		9246A5541F8A068200FC81C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC92889S4P;
@@ -305,6 +414,54 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92EB57551F8AA761009A41F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PC92889S4P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ShiaPlayer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AW.ShiaPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92EB57561F8AA761009A41F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PC92889S4P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ShiaPlayer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AW.ShiaPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -325,6 +482,15 @@
 			buildConfigurations = (
 				9246A5531F8A068200FC81C4 /* Debug */,
 				9246A5541F8A068200FC81C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92EB57571F8AA761009A41F2 /* Build configuration list for PBXNativeTarget "ShiaPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92EB57551F8AA761009A41F2 /* Debug */,
+				92EB57561F8AA761009A41F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
