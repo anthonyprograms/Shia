@@ -44,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		923F48F81F8AAC780077C983 /* SoundCloudPlayer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = SoundCloudPlayer.html; sourceTree = "<group>"; };
 		9246A5401F8A068200FC81C4 /* Shia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9246A5431F8A068200FC81C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9246A5451F8A068200FC81C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 				92EB574E1F8AA761009A41F2 /* ShiaPlayer.h */,
 				92EB57271F8A086F009A41F2 /* YouTubePlayer.swift */,
 				92EB57251F8A07B0009A41F2 /* YouTubePlayer.html */,
+				923F48F81F8AAC780077C983 /* SoundCloudPlayer.html */,
 				92EB574F1F8AA761009A41F2 /* Info.plist */,
 			);
 			path = ShiaPlayer;
